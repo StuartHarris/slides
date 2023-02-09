@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg18"
+   width="335.35425"
+   height="81.869064"
+   viewBox="0 0 335.35424 81.869064"
+   sodipodi:docname="Crux-Assets-V1.ai"
+   inkscape:export-filename="sticker.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs22">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath122">
+      <path
+         d="M 0,595.276 H 841.89 V 0 H 0 Z"
+         id="path120" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview20"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     id="g112"
+     inkscape:groupmode="layer"
+     inkscape:label="Page 2"
+     transform="matrix(1.3333333,0,0,-1.3333333,-117.28947,641.88305)">
+    <g
+       id="g116">
+      <g
+         id="g118"
+         clip-path="url(#clipPath122)">
+        <g
+           id="g124"
+           transform="translate(87.9671,449.0175)">
+          <path
+             d="m 0,0 c 0,17.42 13.242,29.243 28.849,29.243 16.79,0 24.199,-10.798 26.012,-18.838 L 43.116,6.7 c -0.867,3.862 -4.414,10.405 -14.267,10.405 -7.488,0 -15.922,-5.36 -15.922,-17.105 0,-10.483 7.725,-16.553 16.08,-16.553 9.695,0 13.557,6.464 14.661,10.484 L 55.57,-9.459 C 53.757,-17.183 46.348,-29.007 29.007,-29.007 12.927,-29.007 0,-17.42 0,0"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path126" />
+        </g>
+        <g
+           id="g128"
+           transform="translate(212.3751,441.8939)">
+          <path
+             d="M 0,0 V 36.339 H 12.675 V 1.043 c 0,-6.899 6.815,-10.348 12.831,-10.348 6.017,0 12.667,3.449 12.667,10.348 V 36.339 H 50.847 V 0 C 50.847,-14.279 38.02,-21.82 25.506,-21.82 12.992,-21.82 0,-14.279 0,0"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path130" />
+        </g>
+        <g
+           id="g132"
+           transform="translate(176.3347,452.868)">
+          <path
+             d="m 0,0 c 5.227,0 8.041,2.895 8.041,6.915 0,4.262 -2.814,6.916 -8.041,6.916 H -7.478 V 0 Z M -2.975,-10.936 H -7.478 V -32.165 H -20.183 V 24.847 H 2.412 c 11.258,0 18.495,-7.719 18.495,-17.851 0,-7.72 -4.262,-13.59 -11.258,-16.083 l 11.58,-23.078 H 7.237 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path134" />
+        </g>
+        <g
+           id="g136"
+           transform="translate(296.1029,454.0753)">
+          <path
+             d="M 0,0 3.109,-3.109 0,-6.218 l -17.511,-17.511 9.825,-9.826 17.511,17.512 3.109,3.109 9.826,9.825 -9.826,9.825 -3.109,3.109 -17.511,17.512 -9.825,-9.826 z"
+             style="fill:#f24a00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path138" />
+        </g>
+        <g
+           id="g140"
+           transform="translate(313.5225,436.6558)">
+          <path
+             d="M 0,0 16.135,-16.135 25.96,-6.31 9.825,9.825 Z"
+             style="fill:#f58600;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path142" />
+        </g>
+        <g
+           id="g144"
+           transform="translate(339.4828,471.5865)">
+          <path
+             d="m 0,0 -9.825,9.825 -15.998,-15.997 9.826,-9.825 z"
+             style="fill:#f24a00;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path146" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
