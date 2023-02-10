@@ -204,25 +204,14 @@ https://github.com/stuartharris/onion
 | FFI      | `uniffi-bindgen` |  `uniffi-bindgen`  |   -   | `wasm-bindgen` |   -   |
 
 ---
-# Layout of Crux
+![bg fit](./structure.png)
 
-![h:600](./structure.png)
+---
+
+![bg fit](./architecture.svg)
 
 ---
 # The crux of Crux
-
-* Elm architecture
-  * Events in, Effects out
-* Capabilities
-  * Fire and forget
-  `caps.render.render();`
-  * Request/response
-  `caps.http.get(API_URL).expect_json().send(Event::Set);`
-  * Streaming
-  `caps.sse.get_json(API_URL, Event::Update);`
-
----
-# So what _is_ Crux?
 
 * experimental, but usable today
 * infrastructure for headless, multi-platform apps with shared behaviour
@@ -289,6 +278,14 @@ mod test {
     }
 }
 ```
+---
+# Capabilities
+  * Fire and forget
+  `caps.render.render();`
+  * Request/response
+  `caps.http.get(API_URL).expect_json().send(Event::Set);`
+  * Streaming
+  `caps.sse.get_json(API_URL, Event::Update);`
 
 ---
 ![bg right cover](./crux-bg.svg)
