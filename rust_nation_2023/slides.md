@@ -32,6 +32,27 @@ Red Badger
 paginate: true
 footer: "Headless Apps — Rust Nation 2023"
 -->
+# What are we talking about today?
+
+* What do we mean by "Headless apps"?
+* What does the landscape look like?
+* How can we improve on this?
+* Introduce Crux, a new open source "library" for building headless apps.
+
+___
+![bg right grayscale](./profile.jpg)
+
+# Hi, I'm Stu
+
+- Founder of Red Badger
+- Software engineer
+
+<br />
+<br />
+
+![h:80px](./RB_Screen_Logos_Artwork-02.svg)
+
+---
 <style scoped>
   section figure{
     margin-right: 40px !important;
@@ -213,12 +234,12 @@ https://github.com/stuartharris/onion
 ---
 # The crux of Crux
 
-* experimental, but usable today
-* infrastructure for headless, multi-platform apps with shared behaviour
-* for better testability
-* for higher code and behaviour reuse
-* for better safety and security
-* and more joy from better tools
+* a lightweight runtime
+  * for headless, multi-platform apps with shared behaviour
+  * for better testability
+  * for higher code and behaviour reuse
+  * for better safety and security
+  * and more *joy* from better tools
 
 ---
 # What does a Crux app look like?
@@ -291,3 +312,34 @@ mod test {
 ![bg right cover](./crux-bg.svg)
 # Demo
 ## Headless app development in Rust
+
+---
+# Summary
+
+* Headless apps share behaviour across platforms
+* That behaviour can be easily and exhaustively tested
+* Test feedback is very fast, allowing you to be more productive
+* Crux can get you moving quickly
+
+---
+<!--
+_footer: https://content.red-badger.com/events/rust-in-the-enterprise
+-->
+![bg fit](./rust_in_the_enterprise.jpg)
+
+
+
+---
+# Thank you, Rust Nation 2023
+
+- Stuart Harris (https://twitter.com/stuartharris)
+
+- Viktor Charypar (https://twitter.com/charypar)
+
+- Graeme Coupar (https://twitter.com/obmarg)
+
+- https://github.com/redbadger/crux
+
+- https://redbadger.github.io/crux
+
+- https://content.red-badger.com/events/rust-in-the-enterprise
