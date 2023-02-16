@@ -67,8 +67,8 @@ ___
 * Strict contract between Core and Shell
 * Acknowledge that platforms are best at UI ...
   * ... and that UI is a side effect
-* Ports & Adapters (Hexagonal, Clean, Onion Architecture)
 * All about _testability_
+* Ports & Adapters (Hexagonal, Clean, Onion Architecture)
 
 <!-- As a consultancy, unique perspective -->
 
@@ -147,6 +147,28 @@ https://ionicframework.com/
 One to watch: https://tauri.app/blog/2022/12/09/tauri-mobile-alpha/
 
 ---
+# Building a multi-platform app (don’t @ me!)
+
+<style scoped>
+table th {
+    width: 14%;
+}
+</style>
+
+|             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter |
+| ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: |
+| Native UX   |        ✅        |     ✅     |      😐️       |        ❌        |    ❌    |
+| Web?        |        ❌        |     😐️     |      😐️       |        ✅        |    ✅    |
+| Development |        😐️        |     ✅     |      😐️       |        ✅        |    ✅    |
+| Testing     |        😐️        |     😐️     |      🤯       |        🤯        |    😐️    |
+| Maintenance |        😐️        |     ✅     |      😡       |        😡        |    ✅    |
+| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   |
+
+---
+![](./crux_logo.svg)
+![bg right:50% fit](./crux.svg)
+
+---
 # Crux
 ![bg right 60%](./sticker.svg)
 - Platform-native UX
@@ -205,29 +227,15 @@ Alistair Cockburn, [“Hexagonal architecture“](https://alistair.cockburn.us/h
 Alistair Cockburn, [“Hexagonal architecture“](https://alistair.cockburn.us/hexagonal-architecture/), 2005
 
 ---
-# Onion architecture
-
-![bg right:63% fit](./Onion.png)
-
-<style scoped>
-  a { font-size: 24px; position: absolute;}
-</style>
-https://github.com/stuartharris/onion
-
----
-![](./crux_logo.svg)
-![bg right:50% fit](./crux.svg)
-
----
 # _Any_ client
 
-|          |       iOS        |      Android       |  Web  |      Web       |  CLI  |
-| -------- | :--------------: | :----------------: | :---: | :------------: | :---: |
-| language |    Swift/ObjC    |    Kotlin/Java     | Rust  |     JS/TS      | Rust  |
-| UI       |  SwiftUI/UIKit   | Compose/View-based |  Yew  | Next.js/React  |   -   |
-| library  |      static      |   dynamic (JNA)    | crate |      wasm      | crate |
-| lib name |  `libshared.a`   |   `libshared.so`   |   -   | `shared.wasm`  |   -   |
-| FFI      | `uniffi-bindgen` |  `uniffi-bindgen`  |   -   | `wasm-bindgen` |   -   |
+|          |       iOS        |      Android       |      Web       |  Web  |  CLI  |
+| -------- | :--------------: | :----------------: | :------------: | :---: | :---: |
+| language |    Swift/ObjC    |    Kotlin/Java     |     JS/TS      | Rust  | Rust  |
+| UI       |  SwiftUI/UIKit   | Compose/View-based | Next.js/React  |  Yew  |   -   |
+| library  |      static      |   dynamic (JNA)    |      wasm      | crate | crate |
+| lib name |  `libshared.a`   |   `libshared.so`   | `shared.wasm`  |   -   |   -   |
+| FFI      | `uniffi-bindgen` |  `uniffi-bindgen`  | `wasm-bindgen` |   -   |   -   |
 
 Type generation with `serde-generate`
 
@@ -318,15 +326,15 @@ mod test {
 
         let update = app.update(Event::Increment, &mut model);
 
-        // Check view model is correct
-        let actual_view = app.view(&model).count;
-        let expected_view = "Count is: 1";
-        assert_eq!(actual_view, expected_view);
-
         // Check the app asked us to `Render`
         let actual_effect = &update.effects[0];
         let expected_effect = &Effect::Render(RenderOperation);
         assert_eq!(actual_effect, expected_effect);
+
+        // Check view model is correct
+        let actual_view = app.view(&model).count;
+        let expected_view = "Count is: 1";
+        assert_eq!(actual_view, expected_view);
     }
 }
 ```
@@ -350,9 +358,9 @@ mod test {
 
 * Build a community
 * Build some big apps
-* Improve ergonomics and DX — docs, book, sharp edges, testing
+* Improve ergonomics and DX — docs, [book](https://redbadger.github.io/crux), sharp edges, testing
 * Crux Doctor
-* Evolve capabilities (e.g. with shell-side code)
+* Evolve capabilities (and add shell-side code)
 * You tell us?
 ---
 # Summary
@@ -389,8 +397,11 @@ _footer: https://content.red-badger.com/events/rust-in-the-enterprise
 - Stuart Harris
   https://twitter.com/stuartharris
 
-- https://github.com/redbadger/crux
+- Github
+  https://github.com/redbadger/crux
 
-- https://redbadger.github.io/crux
+- Book
+  https://redbadger.github.io/crux
 
-- https://content.red-badger.com/events/rust-in-the-enterprise
+- Event tomorrow
+  https://content.red-badger.com/events/rust-in-the-enterprise
