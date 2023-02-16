@@ -263,11 +263,12 @@ Type generation with `serde-generate`
 
 - Built-in (`Render`)
 
-- Crux crates (`Http`, `KeyValue`, `Platform`, `Time`)
+- `crux_*` crates (`Http`, `KeyValue`, `Platform`, `Time`)
 
 - Custom
   - `ServerSentEvents` in the [Counter example](https://github.com/redbadger/crux/blob/master/examples/counter/shared/src/capabilities/sse.rs)
   - `Delay` example in the [book](https://redbadger.github.io/crux/guide/capability_apis.html)
+  - `Timer` and `PubSub` in the [Notes example](https://github.com/redbadger/crux/tree/master/examples/notes/shared/src/capabilities)
 
 - Community contributed
 
@@ -344,6 +345,15 @@ mod test {
   * for higher code and behaviour reuse
   * for better safety and security
   * and more *joy* from better tools
+---
+# What's next?
+
+* Build a community
+* Build some big apps
+* Improve ergonomics and DX — docs, book, sharp edges, testing
+* Crux Doctor
+* Evolve capabilities (e.g. with shell-side code)
+* You tell us?
 ---
 # Summary
 
