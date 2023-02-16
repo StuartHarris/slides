@@ -61,6 +61,7 @@ ___
 
 # What are headless apps?
 ![bg right:25% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f92f.svg)
+
 * Share _behaviour_ across platforms
 * Pure Core (push side effects to the edge)
 * Strict contract between Core and Shell
@@ -73,7 +74,6 @@ ___
 
 ---
 # Motivation
-
 ![bg right](./sand.jpeg)
 
 * JavaScript is a mess!
@@ -87,10 +87,10 @@ ___
 https://redbadger.github.io/crux/motivation.html
 
 ---
-
 # Platform Native
 ![vertical bg right:40% h:80%](./swiftui-96x96_2x.png)
 ![bg 73%](jetpack_compose.png)
+
 - Platform-native UX
 - Nothing is shared (but full control)
 - Siloed teams (Swift, Kotlin)
@@ -101,18 +101,9 @@ https://developer.apple.com/xcode/swiftui/
 https://developer.android.com/jetpack/compose
 
 ---
-# Kotlin Multi-platform Mobile
-![bg right fit](./kmm.svg)
-- Platform-native UX
-- Shared logic
-- Access to native APIs
-- Teams do Kotlin (and Swift)
-
-https://kotlinlang.org/lp/mobile/
-
----
 # React Native
 ![bg right:40% fit](./react-native.png)
+
 - Good UX (sometimes need to dig in)
 - Shared logic
 - Teams do TypeScript (but native needed)
@@ -123,7 +114,8 @@ https://reactnative.dev/
 ---
 # Flutter
 ![bg right fit](./flutter.png)
-- Full stack (UX/UI not native)
+
+- Full stack (UX/UI not native, but Cupertino/Material flavours)
 - Everything shared
 - Plugins
 - Teams do Dart
@@ -131,8 +123,20 @@ https://reactnative.dev/
 https://flutter.dev/
 
 ---
+# Kotlin Multi-platform Mobile
+![bg right fit](./kmm.svg)
+
+- Platform-native UX
+- Shared logic
+- Access to native APIs
+- Teams do Kotlin (and Swift)
+
+https://kotlinlang.org/lp/mobile/
+
+---
 # Capacitor / Ionic
 ![bg right:45% fit](./capacitor.avif)
+
 - Hybrid (any Web stack)
 - Access to native APIs
 - Plugins
@@ -140,6 +144,7 @@ https://flutter.dev/
 
 https://capacitorjs.com/
 https://ionicframework.com/
+One to watch: https://tauri.app/blog/2022/12/09/tauri-mobile-alpha/
 
 ---
 # Crux
@@ -211,7 +216,7 @@ https://github.com/stuartharris/onion
 
 ---
 ![](./crux_logo.svg)
-![bg right:50% fit opacity:0.7](./crux.svg)
+![bg right:50% fit](./crux.svg)
 
 ---
 # _Any_ client
@@ -224,22 +229,47 @@ https://github.com/stuartharris/onion
 | lib name |  `libshared.a`   |   `libshared.so`   |   -   | `shared.wasm`  |   -   |
 | FFI      | `uniffi-bindgen` |  `uniffi-bindgen`  |   -   | `wasm-bindgen` |   -   |
 
----
-![bg fit](./structure.png)
+Type generation with `serde-generate`
 
 ---
+<style scoped>
+  section figure{
+    margin: 40px !important;
+  }
+</style>
+
+![bg fit](./structure.svg)
+
+---
+<style scoped>
+  section figure{
+    margin: 36px !important;
+  }
+</style>
 
 ![bg fit](./architecture.svg)
 
 ---
-# The crux of Crux
+# Capabilities
+* Fire and forget
+`caps.render.render();`
+* Request/response
+`caps.http.get(API_URL).expect_json().send(Event::Set);`
+* Streaming
+`caps.sse.get_json(API_URL, Event::Update);`
 
-* a lightweight runtime
-  * for headless, multi-platform apps with shared behaviour
-  * for better testability
-  * for higher code and behaviour reuse
-  * for better safety and security
-  * and more *joy* from better tools
+---
+# Capabilities
+
+- Built-in (`Render`)
+
+- Crux crates (`Http`, `KeyValue`, `Platform`, `Time`)
+
+- Custom
+  - `ServerSentEvents` in the [Counter example](https://github.com/redbadger/crux/blob/master/examples/counter/shared/src/capabilities/sse.rs)
+  - `Delay` example in the [book](https://redbadger.github.io/crux/guide/capability_apis.html)
+
+- Community contributed
 
 ---
 # What does a Crux app look like?
@@ -292,27 +322,28 @@ mod test {
         let expected_view = "Count is: 1";
         assert_eq!(actual_view, expected_view);
 
-        // Check update asked us to `Render`
+        // Check the app asked us to `Render`
         let actual_effect = &update.effects[0];
         let expected_effect = &Effect::Render(RenderOperation);
         assert_eq!(actual_effect, expected_effect);
     }
 }
 ```
----
-# Capabilities
-  * Fire and forget
-  `caps.render.render();`
-  * Request/response
-  `caps.http.get(API_URL).expect_json().send(Event::Set);`
-  * Streaming
-  `caps.sse.get_json(API_URL, Event::Update);`
 
 ---
 ![bg right cover](./crux-bg.svg)
 # Demo
 ## Headless app development in Rust
 
+---
+# The crux of Crux
+
+* a lightweight runtime
+  * for headless, multi-platform, composable apps with shared behaviour
+  * for better testability
+  * for higher code and behaviour reuse
+  * for better safety and security
+  * and more *joy* from better tools
 ---
 # Summary
 
@@ -327,16 +358,26 @@ _footer: https://content.red-badger.com/events/rust-in-the-enterprise
 -->
 ![bg fit](./rust_in_the_enterprise.jpg)
 
+---
+# Big thanks to
 
+- Viktor Charypar
+  https://twitter.com/charypar
+- Graeme Coupar
+  https://twitter.com/obmarg
 
 ---
-# Thank you, Rust Nation 2023
+<style scoped>
+  section figure{
+    margin-right: 40px !important;
+  }
+</style>
 
-- Stuart Harris (https://twitter.com/stuartharris)
+![bg right:40% fit blur:1px opacity:0.5 grayscale](https://www.rustnationuk.com/assets/images/rust-nation.svg)
+# Thank you!
 
-- Viktor Charypar (https://twitter.com/charypar)
-
-- Graeme Coupar (https://twitter.com/obmarg)
+- Stuart Harris
+  https://twitter.com/stuartharris
 
 - https://github.com/redbadger/crux
 
