@@ -16,16 +16,13 @@ backgroundColor: #303030
 ![w:300](https://www.rustnationuk.com/assets/images/rust-nation.svg)
 ![bg right fit opacity:0.7](./crux.svg)
 
-# Headless apps
-18.feb.2023
+# iOS, Android and Web apps in Rust
+## a.k.a. Headless apps
+17.feb.2023
 
-<br/>
-<br/>
-Stuart Harris,
+Stuart Harris
 
-Founder & Chief Scientist
-
-Red Badger
+Founder & Chief Scientist, Red Badger
 
 ---
 <!--
