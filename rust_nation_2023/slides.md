@@ -17,7 +17,9 @@ backgroundColor: #303030
 ![bg right fit opacity:0.7](./crux.svg)
 
 # iOS, Android and Web apps in Rust
+
 ## a.k.a. Headless apps
+
 17.feb.2023
 
 Stuart Harris
@@ -25,18 +27,22 @@ Stuart Harris
 Founder & Chief Scientist, Red Badger
 
 ---
+
 <!--
 paginate: true
 footer: "Headless Apps — Rust Nation 2023"
 -->
+
 # What are we talking about today?
 
+<!-- prettier-ignore -->
 * What do we mean by "Headless apps"?
 * What does the landscape look like?
 * How can we improve on this?
 * Introduce Crux, a new open source "library" for building headless apps.
 
-___
+---
+
 ![bg right grayscale](./profile.jpg)
 
 # Hi, I'm Stu
@@ -50,6 +56,7 @@ ___
 ![h:80px](./RB_Screen_Logos_Artwork-02.svg)
 
 ---
+
 <style scoped>
   section figure{
     margin-right: 40px !important;
@@ -57,8 +64,10 @@ ___
 </style>
 
 # What are headless apps?
+
 ![bg right:25% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f92f.svg)
 
+<!-- prettier-ignore -->
 * Share _behaviour_ across platforms
 * Pure Core (push side effects to the edge)
 * Strict contract between Core and Shell
@@ -70,9 +79,12 @@ ___
 <!-- As a consultancy, unique perspective -->
 
 ---
+
 # Motivation
+
 ![bg right](./sand.jpeg)
 
+<!-- prettier-ignore -->
 * JavaScript is a mess!
   Layer on top of layer.
   On top of sand.
@@ -84,7 +96,9 @@ ___
 https://redbadger.github.io/crux/motivation.html
 
 ---
+
 # Platform Native
+
 ![vertical bg right:40% h:80%](./swiftui-96x96_2x.png)
 ![bg 73%](jetpack_compose.png)
 
@@ -98,7 +112,9 @@ https://developer.apple.com/xcode/swiftui/
 https://developer.android.com/jetpack/compose
 
 ---
+
 # React Native
+
 ![bg right:40% fit](./react-native.png)
 
 - Good UX (sometimes need to dig in)
@@ -109,7 +125,9 @@ https://developer.android.com/jetpack/compose
 https://reactnative.dev/
 
 ---
+
 # Flutter
+
 ![bg right fit](./flutter.png)
 
 - Full stack (UX/UI not native, but Cupertino/Material flavours)
@@ -120,7 +138,9 @@ https://reactnative.dev/
 https://flutter.dev/
 
 ---
+
 # Kotlin Multi-platform Mobile
+
 ![bg right fit](./kmm.svg)
 
 - Platform-native UX
@@ -131,7 +151,9 @@ https://flutter.dev/
 https://kotlinlang.org/lp/mobile/
 
 ---
+
 # Capacitor / Ionic
+
 ![bg right:45% fit](./capacitor.avif)
 
 - Hybrid (any Web stack)
@@ -140,10 +162,13 @@ https://kotlinlang.org/lp/mobile/
 - Teams do TypeScript
 
 https://capacitorjs.com/
+
 https://ionicframework.com/
+
 One to watch: https://tauri.app/blog/2022/12/09/tauri-mobile-alpha/
 
 ---
+
 # Building a multi-platform app (don’t @ me!)
 
 <style scoped>
@@ -154,20 +179,23 @@ table th {
 
 |             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter |
 | ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: |
-| Native UX   |        ✅        |     ✅     |      😐️       |        ❌        |    ❌    |
-| Web?        |        ❌        |     😐️     |      😐️       |        ✅        |    ✅    |
-| Development |        😐️        |     ✅     |      😐️       |        ✅        |    ✅    |
-| Testing     |        😐️        |     😐️     |      🤯       |        🤯        |    😐️    |
-| Maintenance |        😐️        |     ✅     |      😡       |        😡        |    ✅    |
+| Native UX   |       ✅        |    ✅     |     😐️      |       ❌        |   ❌    |
+| Web?        |       ❌        |    😐️    |     😐️      |       ✅        |   ✅    |
+| Development |       😐️       |    ✅     |     😐️      |       ✅        |   ✅    |
+| Testing     |       😐️       |    😐️    |      🤯      |       🤯        |   😐️   |
+| Maintenance |       😐️       |    ✅     |      😡      |       😡        |   ✅    |
 | Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   |
 
 ---
-![](./crux_logo.svg)
-![bg right:50% fit](./crux.svg)
+
+![](./crux_logo.svg) ![bg right:50% fit](./crux.svg)
 
 ---
+
 # Crux
+
 ![bg right 60%](./sticker.svg)
+
 - Platform-native UX
 - Shared _behaviour_
 - Capabilities
@@ -177,6 +205,7 @@ table th {
 https://redbadger.github.io/crux
 
 ---
+
 # Building a multi-platform app (don’t @ me!)
 
 <style scoped>
@@ -185,16 +214,17 @@ table th {
 }
 </style>
 
-|             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter | Crux  |
-| ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: | :---: |
-| Native UX   |        ✅        |     ✅     |      😐️       |        ❌        |    ❌    |   ✅   |
-| Web?        |        ❌        |     😐️     |      😐️       |        ✅        |    ✅    |   ✅   |
-| Development |        😐️        |     ✅     |      😐️       |        ✅        |    ✅    |   ✅   |
-| Testing     |        😐️        |     😐️     |      🤯       |        🤯        |    😐️    |   🤩   |
-| Maintenance |        😐️        |     ✅     |      😡       |        😡        |    ✅    |   ✅   |
-| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   | 1.4x  |
+|             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter | Crux |
+| ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: | :--: |
+| Native UX   |       ✅        |    ✅     |     😐️      |       ❌        |   ❌    |  ✅  |
+| Web?        |       ❌        |    😐️    |     😐️      |       ✅        |   ✅    |  ✅  |
+| Development |       😐️       |    ✅     |     😐️      |       ✅        |   ✅    |  ✅  |
+| Testing     |       😐️       |    😐️    |      🤯      |       🤯        |   😐️   |  🤩  |
+| Maintenance |       😐️       |    ✅     |      😡      |       😡        |   ✅    |  ✅  |
+| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   | 1.4x |
 
 ---
+
 # Who benefits?
 
 <style scoped>
@@ -206,24 +236,34 @@ table th {
 ![bg right:72% fit](./benefit.png)
 
 ---
+
 # Ports and adapters
 
 ![bg right:40% fit opacity:0.5 grayscale](./crux.svg)
 
-> Allow an application to equally be driven by users, programs, automated test or batch scripts, and to be developed and tested in isolation from its eventual run-time devices and databases.
+> Allow an application to equally be driven by users, programs, automated test
+> or batch scripts, and to be developed and tested in isolation from its
+> eventual run-time devices and databases.
 
-Alistair Cockburn, [“Hexagonal architecture“](https://alistair.cockburn.us/hexagonal-architecture/), 2005
+Alistair Cockburn,
+[“Hexagonal architecture“](https://alistair.cockburn.us/hexagonal-architecture/),
+2005
 
 ---
+
 # Ports and adapters
 
 ![bg grayscale blur:5px opacity:0.1 fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f92f.svg)
 
-> The application can be deployed in ‘’headless’’ mode, so only the API is available, and other programs can make use of its functionality
+> The application can be deployed in ‘’headless’’ mode, so only the API is
+> available, and other programs can make use of its functionality
 
-Alistair Cockburn, [“Hexagonal architecture“](https://alistair.cockburn.us/hexagonal-architecture/), 2005
+Alistair Cockburn,
+[“Hexagonal architecture“](https://alistair.cockburn.us/hexagonal-architecture/),
+2005
 
 ---
+
 # _Any_ client
 
 |          |       iOS        |      Android       |      Web       |  Web  |  CLI  |
@@ -237,6 +277,7 @@ Alistair Cockburn, [“Hexagonal architecture“](https://alistair.cockburn.us/h
 Type generation with `serde-generate`
 
 ---
+
 <style scoped>
   section figure{
     margin: 40px !important;
@@ -246,6 +287,7 @@ Type generation with `serde-generate`
 ![bg fit](./structure.svg)
 
 ---
+
 <style scoped>
   section figure{
     margin: 36px !important;
@@ -255,15 +297,21 @@ Type generation with `serde-generate`
 ![bg fit](./architecture.svg)
 
 ---
+
 # Capabilities
+
+<!-- prettier-ignore -->
 * Fire and forget
 `caps.render.render();`
+<!-- prettier-ignore -->
 * Request/response
 `caps.http.get(API_URL).expect_json().send(Event::Set);`
+<!-- prettier-ignore -->
 * Streaming
 `caps.sse.get_json(API_URL, Event::Update);`
 
 ---
+
 # Capabilities
 
 - Built-in (`Render`)
@@ -271,13 +319,18 @@ Type generation with `serde-generate`
 - `crux_*` crates (`Http`, `KeyValue`, `Platform`, `Time`)
 
 - Custom
-  - `ServerSentEvents` in the [Counter example](https://github.com/redbadger/crux/blob/master/examples/counter/shared/src/capabilities/sse.rs)
-  - `Delay` example in the [book](https://redbadger.github.io/crux/guide/capability_apis.html)
-  - `Timer` and `PubSub` in the [Notes example](https://github.com/redbadger/crux/tree/master/examples/notes/shared/src/capabilities)
+
+  - `ServerSentEvents` in the
+    [Counter example](https://github.com/redbadger/crux/blob/master/examples/counter/shared/src/capabilities/sse.rs)
+  - `Delay` example in the
+    [book](https://redbadger.github.io/crux/guide/capability_apis.html)
+  - `Timer` and `PubSub` in the
+    [Notes example](https://github.com/redbadger/crux/tree/master/examples/notes/shared/src/capabilities)
 
 - Community contributed
 
 ---
+
 # What does a Crux app look like?
 
 ```rust
@@ -307,7 +360,9 @@ impl App for Hello {
     }
 }
 ```
+
 ---
+
 # What does a test look like?
 
 ```rust
@@ -337,51 +392,64 @@ mod test {
 ```
 
 ---
+
 ![bg right cover](./crux-bg.svg)
+
 # Demo
+
 ## Headless app development in Rust
 
 ---
+
 # The crux of Crux
 
+<!-- prettier-ignore -->
 * a lightweight runtime
   * for headless, multi-platform, composable apps with shared behaviour
   * for better testability
   * for higher code and behaviour reuse
   * for better safety and security
   * and more *joy* from better tools
+
 ---
+
 # What's next?
 
+<!-- prettier-ignore -->
 * Build a community
 * Build some big apps
 * Improve ergonomics and DX — docs, [book](https://redbadger.github.io/crux), sharp edges, testing
 * Crux Doctor
 * Evolve capabilities (and add shell-side code)
 * You tell us?
+
 ---
+
 # Summary
 
+<!-- prettier-ignore -->
 * Headless apps share behaviour across platforms
 * That behaviour can be easily and exhaustively tested
 * Test feedback is very fast, allowing you to be more productive
 * Crux can get you moving quickly
 
 ---
+
 <!--
 _footer: https://content.red-badger.com/events/rust-in-the-enterprise
 -->
+
 ![bg fit](./rust_in_the_enterprise.jpg)
 
 ---
+
 # Big thanks to
 
-- Viktor Charypar
-  https://twitter.com/charypar
-- Graeme Coupar
-  https://twitter.com/obmarg
+- Viktor Charypar https://twitter.com/charypar
+- Graeme Coupar https://twitter.com/obmarg
 
 ---
+
 <style scoped>
   section figure{
     margin-right: 40px !important;
@@ -389,16 +457,13 @@ _footer: https://content.red-badger.com/events/rust-in-the-enterprise
 </style>
 
 ![bg right:40% fit blur:1px opacity:0.5 grayscale](https://www.rustnationuk.com/assets/images/rust-nation.svg)
+
 # Thank you!
 
-- Stuart Harris
-  https://twitter.com/stuartharris
+- Stuart Harris https://twitter.com/stuartharris
 
-- Github
-  https://github.com/redbadger/crux
+- Github https://github.com/redbadger/crux
 
-- Book
-  https://redbadger.github.io/crux
+- Book https://redbadger.github.io/crux
 
-- Event tomorrow
-  https://content.red-badger.com/events/rust-in-the-enterprise
+- Event tomorrow https://content.red-badger.com/events/rust-in-the-enterprise
