@@ -91,7 +91,7 @@ This means:
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
-![bg right:30% contain](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f970.svg)
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f970.svg)
 
 ---
 
@@ -131,7 +131,7 @@ This means:
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
-![bg right:30% contain](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f469-200d-1f527.svg)
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f469-200d-1f527.svg)
 
 ---
 
@@ -141,7 +141,7 @@ This means:
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
-![bg right:30% contain](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f92f.svg)
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f92f.svg)
 
 ---
 
@@ -171,7 +171,7 @@ This means:
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
-![bg right:30% contain](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f510.svg)
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f510.svg)
 
 ---
 
@@ -236,7 +236,7 @@ This means:
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
-![bg right:30% contain](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f46e.svg)
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f46e.svg)
 
 ---
 
@@ -247,7 +247,7 @@ This means:
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
-![bg right:30% contain](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f5dc.svg)
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f5dc.svg)
 
 ---
 
@@ -263,7 +263,7 @@ This means:
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
-![bg right:30% contain](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3c7.svg)
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3c7.svg)
 
 ---
 
@@ -282,7 +282,7 @@ But if you’re not starting now, you’ll already be behind when it matters
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
-![bg right:30% contain](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3c3-200d-2640-fe0f.svg)
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3c3-200d-2640-fe0f.svg)
 
 ---
 
@@ -305,7 +305,7 @@ But if you’re not starting now, you’ll already be behind when it matters
 
 ---
 
-# Finally...
+# Also...
 
 > Don't “Rewrite it in Rust”™!
 
@@ -314,6 +314,36 @@ Rust was born at Mozilla in 2009...
 ...but in 2023, Firefox is still less than 10% Rust
 
 ![bg right:40% fit](./firefox_rust.png)
+
+---
+
+# And finally...
+
+## Rust and WebAssembly
+
+- Rust and Wasm are a perfect match
+- Wasm is becoming a game-changer for cloud native
+- The sandboxed execution environment is a great fit for enterprise
+
+<style scoped>section figure { margin-right: 100px !important; }</style>
+
+![bg right:25% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f49e.svg)
+
+---
+
+# Something to think about...
+
+## Rust and Copilot
+
+<!-- prettier-ignore -->
+> Despite being risk averse, enterprises will not be able to resist the productivity gains of AI coding assistants...
+
+<!-- prettier-ignore -->
+> ...thank goodness the Rust compiler is strict and precise!
+
+<style scoped>section figure { margin-right: 100px !important; }</style>
+
+![bg right:25% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270d.svg)
 
 ---
 
