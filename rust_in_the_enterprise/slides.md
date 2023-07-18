@@ -15,7 +15,7 @@ backgroundColor: #303030
 
 # Rust in the Enterprise
 
-## Taking control with a modern, <br/>sustainable approach
+## Taking control with a modern, <br/> sustainable approach <br/> to software engineering
 
 2023-07-20
 
@@ -323,3 +323,80 @@ Rust was born at Mozilla in 2009...
 
 ![bg right fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f37b.svg)
 ![bg right fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f355.svg)
+
+---
+
+# OK, let's talk Crux
+
+<!-- prettier-ignore -->
+> Crux is a great example of how Rust can help the enterprise build better quality software with less effort (cost) and more Joy™
+
+![bg right](../rust_nation_2023/crux-bg.svg)
+
+---
+
+# But first...
+
+![bg](./jenkins-fire.webp)
+
+---
+
+# Or 17ms...
+
+![bg right:60% fit](./notes_tests.webp)
+
+---
+
+![bg](https://raw.githubusercontent.com/redbadger/crux/master/examples/counter/counter.webp)
+
+---
+
+![w:300](https://www.rustnationuk.com/assets/images/rust-nation.svg)
+![bg right fit opacity:0.7](../rust_nation_2023//crux.svg)
+
+# iOS, Android and Web apps in Rust
+
+## a.k.a. Headless apps
+
+17.feb.2023
+
+Stuart Harris
+
+Founder & Chief Scientist, Red Badger
+
+---
+
+![](../rust_nation_2023/rust_nation.png)
+
+![](https://red-badger.com/hs-fs/hubfs/1676635294039.jpeg)
+
+![bg right](https://red-badger.com/hs-fs/hubfs/1676635296038.jpeg)
+
+---
+
+# Building a multi-platform app (don’t @ me!)
+
+<style scoped>
+table th {
+    width: 14%;
+}
+</style>
+
+|             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter | Crux |
+| ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: | :--: |
+| Native UX   |       ✅        |    ✅     |     😐️      |       ❌        |   ❌    |  ✅  |
+| Web?        |       ❌        |    😐️    |     😐️      |       ✅        |   ✅    |  ✅  |
+| Development |       😐️       |    ✅     |     😐️      |       ✅        |   ✅    |  ✅  |
+| Testing     |       😐️       |    😐️    |      🤯      |       🤯        |   😐️   |  🤩  |
+| Maintenance |       😐️       |    ✅     |      😡      |       😡        |   ✅    |  ✅  |
+| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   | 1.4x |
+
+---
+
+![](../rust_nation_2023//architecture.svg)
+
+---
+
+# Deep dive into Crux
+
+![bg right 50%](../rust_nation_2023/sticker.svg)
