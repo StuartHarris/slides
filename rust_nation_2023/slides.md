@@ -43,7 +43,7 @@ footer: "Headless Apps — Rust Nation 2023"
 
 ---
 
-![bg right grayscale](./profile.jpg)
+![bg right grayscale](../assets/stu.jpg)
 
 # Hi, I'm Stu
 
@@ -53,7 +53,7 @@ footer: "Headless Apps — Rust Nation 2023"
 <br />
 <br />
 
-![h:80px](./RB_Screen_Logos_Artwork-02.svg)
+![h:80px](../assets/RB_Screen_Logos_Artwork-02.svg)
 
 ---
 
