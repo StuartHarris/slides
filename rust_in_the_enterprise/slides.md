@@ -578,3 +578,7 @@ table th {
 - https://red-badger.com/crux
 - https://docs.rs/crux_core/latest/crux_core/
 - https://www.youtube.com/watch?v=cWCZms92-1g&t=5s
+
+---
+
+![QR code](./qr.webp)
