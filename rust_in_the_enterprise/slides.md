@@ -540,3 +540,41 @@ table th {
 # Deep dive into Crux
 
 ![bg right 50%](../rust_nation_2023/sticker.svg)
+
+---
+
+# Thank you!
+
+<style scoped>section figure { margin-right: 100px !important; }</style>
+
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f64f.svg)
+
+---
+
+# Why Rust?
+
+- https://aws.amazon.com/blogs/opensource/sustainability-with-rust/
+- https://www.wired.com/story/rust-secure-programming-language-memory-safe/
+- https://content.red-badger.com/resources/how-to-use-rust-to-build-networked-services
+- https://www.technologyreview.com/2023/02/14/1067869/rust-worlds-fastest-growing-programming-language
+- https://www.techspot.com/news/97654-how-broken-elevator-led-one-most-loved-programming.html
+
+---
+
+# Rust adoption in the enterprise
+
+- https://www.infoq.com/presentations/rust-adoption-journey/
+- https://rustmagazine.org/issue-1/2022-review-the-adoption-of-rust-in-business/
+- https://vercel.com/blog/turborepo-migration-go-rust
+- https://opensource.googleblog.com/2023/06/rust-fact-vs-fiction-5-insights-from-googles-rust-journey-2022.html
+- https://www.infoq.com/articles/rust-ecosystem-review-2023
+
+---
+
+# Crux
+
+- https://github.com/redbadger/crux
+- https://redbadger.github.io/crux/
+- https://red-badger.com/crux
+- https://docs.rs/crux_core/latest/crux_core/
+- https://www.youtube.com/watch?v=cWCZms92-1g&t=5s
