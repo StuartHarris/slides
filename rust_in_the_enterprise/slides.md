@@ -145,9 +145,9 @@ https://deepsource.com/blog/exponential-cost-of-fixing-bugs
 This means:
 
 - It is easy to understand
-- It is easy to change
 - It is easy to test
 - It is easy to deploy
+- It is easy to change
 
 <!-- easy to "not touch" for months -->
 
@@ -163,10 +163,10 @@ This means:
 > "Free up your teams to work on the most important problems — those that are _unique_ to your business"
 
 - Rust's guardrails prevent us wasting time on bugs
-- A large codebase won't descend into chaos
 - Rust's toolchain is the best there is
   - removes bike-shedding
   - reduces yak-shaving
+- A large codebase won't descend into chaos
 - "It just works"™
   - no long tail — means you can leave it alone
 
