@@ -176,6 +176,26 @@ This means:
 
 ---
 
+# Sustainable Software Engineering
+
+<!-- prettier-ignore -->
+> "Everyone has a part to play."
+> "Sustainability is enough, all by itself, to justify our work."
+
+- Find as many "Carbon Proxies" as you can, e.g.
+  - Time-to-interactive and Page weight
+  - Average server response time
+  - Cost of your services
+  - The utilisation of your servers
+
+![bg right:30% fit](https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2022/02/09/sust-rust-3.png)
+
+[sustainability with rust](https://aws.amazon.com/blogs/opensource/sustainability-with-rust/)
+[sustainable software engineering overview](https://learn.microsoft.com/en-gb/training/modules/sustainable-software-engineering-overview)
+[how to measure and reduce the carbon footprint of your application](https://www.microsoft.com/en-gb/industry/blog/technetuk/2021/10/12/how-to-measure-and-reduce-the-carbon-footprint-of-your-application/)
+
+---
+
 # So what do enterprises care about?
 
 - ✅ **Quality** — they want to build software that works
