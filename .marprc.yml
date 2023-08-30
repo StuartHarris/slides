@@ -1,0 +1,10 @@
+allowLocalFiles: true
+options:
+  looseYAML: false
+  markdown:
+    breaks: false
+pdf: true
+bespoke:
+  progress: true
+server: true
+watch: true
