@@ -72,17 +72,6 @@ experimental, open source tooling for building _headless_ apps
 
 ---
 
-![1](https://icongr.am/material/numeric-1-circle.svg?color=666666) _What_ is the
-problem with multi-platform app development today?
-
-![2](https://icongr.am/material/numeric-2-circle.svg?color=666666) _Rust_,
-_WebAssembly_, and _Ports and Adapters_
-
-![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) _Crux_ —
-experimental, open source tooling for building _headless_ apps
-
----
-
 ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) _What_ is the
 problem with multi-platform app development today?
 
@@ -273,19 +262,17 @@ experimental, open source tooling for building _headless_ apps
 
 ---
 
-# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900)
+# ![3 w:256 h:256](https://icongr.am/material/numeric-3-circle.svg?color=ff9900)
 
 ![](../rust_nation_2023/crux_logo.svg)
 
 ![bg right 60%](../rust_nation_2023/sticker.svg)
 
-- Platform-native UX
 - Shared _behaviour_
 - Capabilities
-- Teams do Rust &nbsp; ![h:35](../rust_nation_2023/rustacean-orig-noshadow.png)
-- (and Swift, Kotlin, TypeScript)
-
-https://redbadger.github.io/crux
+- Platform _native_ UX
+- At least one team does _Rust_ &nbsp;
+  ![h:35](../rust_nation_2023/rustacean-orig-noshadow.png)
 
 ---
 
@@ -478,14 +465,28 @@ mod test {
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) The crux of Crux
 
+<style scoped>section figure { margin-left: 100px !important; }</style>
+
+![bg left:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f970.svg)
+
 <!-- prettier-ignore -->
 * a lightweight runtime
-  * for headless, multi-platform, composable apps with shared behaviour
-  * for better testability
-  * for higher code and behaviour reuse
-  * for better safety and security
-  * and more *joy* from better tools
+  * for headless, multi-platform, composable apps with shared _behavior_
+  * for better _testability_
+  * for higher _quality_
+  * for better _reliability_, safety, and security
+  * and more _joy_ from better tools
 
 ---
 
-## Thank you!
+# Thank you!
+
+<style scoped>section figure { margin-right: 100px !important; }</style>
+
+![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f64f.svg)
+
+- https://github.com/redbadger/crux
+- https://redbadger.github.io/crux/
+- https://red-badger.com/crux
+- https://docs.rs/crux_core/latest/crux_core/
+- https://www.youtube.com/watch?v=cWCZms92-1g&t=5s
