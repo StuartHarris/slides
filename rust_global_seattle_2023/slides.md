@@ -411,13 +411,13 @@ Alistair Cockburn,
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) _Any_ client
 
-|          |       iOS        |      Android       |      Web       |  Web  |  CLI  |
-| -------- | :--------------: | :----------------: | :------------: | :---: | :---: |
-| language |    Swift/ObjC    |    Kotlin/Java     |     JS/TS      | Rust  | Rust  |
-| UI       |  SwiftUI/UIKit   | Compose/View-based | Next.js/React  |  Yew  |   -   |
-| library  |      static      |   dynamic (JNA)    |      wasm      | crate | crate |
-| lib name |  `libshared.a`   |   `libshared.so`   | `shared.wasm`  |   -   |   -   |
-| FFI      | `uniffi-bindgen` |  `uniffi-bindgen`  | `wasm-bindgen` |   -   |   -   |
+| platform |  language  |   UI    | library |    lib name    |       FFI        |
+| -------- | :--------: | :-----: | :-----: | :------------: | :--------------: |
+| iOS      |   Swift    | SwiftUI | static  | `libshared.a`  | `uniffi-bindgen` |
+| Android  |   Kotlin   | Compose | dynamic | `libshared.so` | `uniffi-bindgen` |
+| Web      | TypeScript |  Remix  |  wasm   | `shared.wasm`  |  `wasm-bindgen`  |
+| Web      |    Rust    | Leptos  |  crate  |                |                  |
+| CLI      |    Rust    |         |  crate  |                |                  |
 
 Type generation with `serde-generate`
 
@@ -437,15 +437,23 @@ Type generation with `serde-generate`
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Capabilities
 
-<!-- prettier-ignore -->
-* Fire and forget
-`caps.render.render();`
-<!-- prettier-ignore -->
-* Request/response
-`caps.http.get(API_URL).expect_json().send(Event::Set);`
-<!-- prettier-ignore -->
-* Streaming
-`caps.sse.get_json(API_URL, Event::Update);`
+Fire and forget
+
+```rust
+caps.render.render();
+```
+
+Request/response
+
+```rust
+caps.http.get(API_URL).expect_json().send(Event::Set);
+```
+
+Streaming
+
+```rust
+caps.sse.get_json(API_URL, Event::Update);
+```
 
 ---
 
@@ -472,9 +480,9 @@ Type generation with `serde-generate`
 
 ```rust
 #[derive(Default)]
-pub struct Hello;
+pub struct App;
 
-impl App for Hello {
+impl crux_core::App for App {
     type Event = Event;
     type Model = Model;
     type ViewModel = ViewModel;
@@ -506,7 +514,7 @@ impl App for Hello {
 #[cfg(test)]
 mod test {
     use super::*;
-    use crux_core::{render::RenderOperation, testing::AppTester};
+    use crux_core::testing::AppTester;
 
     #[test]
     fn increments_count() {
@@ -516,9 +524,7 @@ mod test {
         let update = app.update(Event::Increment, &mut model);
 
         // Check the app asked us to `Render`
-        let actual_effect = &update.effects[0];
-        let expected_effect = &Effect::Render(RenderOperation);
-        assert_eq!(actual_effect, expected_effect);
+        assert_effect!(update, Effect::Render(_));
 
         // Check view model is correct
         let actual_view = app.view(&model).count;
