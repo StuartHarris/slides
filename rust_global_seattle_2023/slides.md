@@ -74,6 +74,8 @@ experimental, open source tooling for building _headless_ apps
 - Software engineer
 - Founder of Red Badger
 
+[@stuartharris](https://twitter.com/stuartharris)
+
 ## ![h:80px](../assets/RB_Screen_Logos_Artwork-02.svg)
 
 ---
@@ -616,14 +618,17 @@ mod test {
 
 ---
 
-# Thank you!
+# Thank you! ![h:40](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f64f.svg)
 
-<style scoped>section figure { margin-right: 100px !important; }</style>
+![slides bg fit right:30%](qr_code.png)
 
-![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f64f.svg)
+[@stuartharris](https://twitter.com/stuartharris)
 
-- https://github.com/redbadger/crux
-- https://redbadger.github.io/crux/
-- https://red-badger.com/crux
-- https://docs.rs/crux_core/latest/crux_core/
-- https://www.youtube.com/watch?v=cWCZms92-1g&t=5s
+[Slides](https://github.com/StuartHarris/slides/blob/main/rust_global_seattle_2023/slides.pdf)
+
+[Crux Book](https://redbadger.github.io/crux/),
+[Crux Github](https://github.com/redbadger/crux),
+[Crux Docs](https://docs.rs/crux_core/latest/crux_core/),
+[Crux Website](https://red-badger.com/crux)
+
+[Rust Nation 2023 Talk](https://www.youtube.com/watch?v=cWCZms92-1g&t=5s)
