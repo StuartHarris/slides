@@ -116,7 +116,7 @@ experimental, open source tooling for building _headless_ apps
 
 <style scoped>
 table th {
-    width: 14%;
+    width: 16%;
 }
 </style>
 
@@ -402,6 +402,18 @@ Alistair Cockburn, 2005
 
 ---
 
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) WebAssembly
+
+<style scoped>section figure { margin-left: 100px !important; }</style>
+
+![bg left:30% fit](./wasm.svg)
+
+WebAssembly helps us stay honest!
+
+![h:60](./wasm-ferris.png)
+
+---
+
 ![bg right:50% fit](../rust_nation_2023/crux.svg)
 
 ![1](https://icongr.am/material/numeric-1-circle.svg?color=666666) _What_ is the
@@ -415,9 +427,7 @@ experimental, open source tooling for building _headless_ apps
 
 ---
 
-# ![3 w:256 h:256](https://icongr.am/material/numeric-3-circle.svg?color=ff9900)
-
-![](../rust_nation_2023/crux_logo.svg)
+# ![3 w:256 h:256](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) ![Crux](../rust_nation_2023/crux_logo.svg)
 
 ![bg right 60%](../rust_nation_2023/sticker.svg)
 
@@ -620,9 +630,13 @@ mod test {
 
 # Thank you! ![h:40](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f64f.svg)
 
+<style scoped>section figure { margin-right: 100px !important; }</style>
+
 ![slides bg fit right:30%](qr_code.png)
 
 [@stuartharris](https://twitter.com/stuartharris)
+
+<br/>
 
 [Slides](https://github.com/StuartHarris/slides/blob/main/rust_global_seattle_2023/slides.pdf)
 
