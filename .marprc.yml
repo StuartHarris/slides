@@ -8,3 +8,4 @@ bespoke:
   progress: true
 server: true
 watch: true
+html: true

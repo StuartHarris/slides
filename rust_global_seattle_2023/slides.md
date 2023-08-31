@@ -25,6 +25,12 @@ style: |
     vertical-align: middle;
     width: 64px;
   }
+  .morph {
+    display: inline-block;
+    view-transition-name: var(--morph-name);
+    contain: layout;
+    vertical-align: top;
+  }
 backgroundColor: #303030
 transition: fade 250ms
 ---
@@ -181,61 +187,130 @@ We build a _core_ that encapsulates our app’s behavior:
 
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Elm, Redux, etc.
 
+<div class="morph" style="--morph-name:update;">
+
+A _pure_ update function
+
 ```rust
-
 fn update(event: Event, state: State) -> (State, Vec<Effect>)
-
 ```
+
+</div>
 
 ---
 
+<!--transition: fade 600ms-->
+
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) UI as a projection of state
 
-Then, just like React used to be, we imagine the UI as a projection of the model
+Just like React _used to be_, we imagine the UI as a projection of the model
+
+<div class="morph" style="--morph-name:view;">
 
 ```rust
-
-fn render(s: State) -> {/*update UI*/}
-
+fn view(s: State) -> {/*update UI*/}
 ```
+
+</div>
 
 ---
 
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Platform independence
 
-Introduce a view model to abstract the view
+Introduce a _view model_ to abstract the view
+
+<div class="morph" style="--morph-name:view;">
 
 ```rust
-
 fn view(s: State) -> ViewModel
-
-fn render(view: ViewModel) -> {/*update UI*/}
-
 ```
+
+</div>
+<div class="morph" style="--morph-name:render;">
+
+```rust
+fn render(view: ViewModel) -> {/*update UI*/}
+```
+
+</div>
 
 ---
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) A pure Core
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Before
+
+All the _Behavior_
+
+<div class="morph" style="--morph-name:update;">
 
 ```rust
-
 fn update(event: Event, state: State) -> (State, Vec<Effect>)
-
-fn view(s: State) -> ViewModel
-
 ```
+
+</div>
+<div class="morph" style="--morph-name:http;">
+
+```rust
+fn http(e: Effect) -> {/*perform HTTP request*/}
+```
+
+</div>
+
+_UI_ as a projection of state
+
+<div class="morph" style="--morph-name:view;">
+
+```rust
+fn view(s: State) -> ViewModel
+```
+
+</div>
+<div class="morph" style="--morph-name:render;">
+
+```rust
+fn render(view: ViewModel) -> {/*update UI*/}
+```
+
+</div>
 
 ---
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) A Shell for side-effects
+<!--transition: fade 250ms-->
+
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) After
+
+A pure _Core_
+
+<div class="morph" style="--morph-name:update;">
 
 ```rust
-
-fn http(e: Effect) -> {/*perform HTTP request*/}
-
-fn render(view: ViewModel) -> {/*update UI*/}
-
+fn update(event: Event, state: State) -> (State, Vec<Effect>)
 ```
+
+</div>
+<div class="morph" style="--morph-name:view;">
+
+```rust
+fn view(s: State) -> ViewModel
+```
+
+</div>
+
+A _Shell_ for side-effects
+
+<div class="morph" style="--morph-name:http;">
+
+```rust
+fn http(e: Effect) -> {/*perform HTTP request*/}
+```
+
+</div>
+<div class="morph" style="--morph-name:render;">
+
+```rust
+fn render(view: ViewModel) -> {/*update UI*/}
+```
+
+</div>
 
 ---
 
