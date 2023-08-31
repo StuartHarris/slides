@@ -241,7 +241,7 @@ fn http(effect: Effect) {/*perform HTTP request*/}
 
 </div>
 <div class="morph" style="--morph-name:view;">
-Just like React used to be, we imagine the UI as a projection of state
+Imagine the UI as a projection of state (cf. early React)
 
 ```rust
 fn view(state: Model) {/*update UI*/}
@@ -257,7 +257,7 @@ fn view(state: Model) {/*update UI*/}
 
 </div>
 <div class="morph" style="--morph-name:view;">
-Just like React used to be, we imagine the UI as a projection of state
+Imagine the UI as a projection of state (cf. early React)
 
 ```rust
 fn view(state: Model) -> ViewModel
@@ -357,7 +357,7 @@ fn render(view: ViewModel) {/*update UI*/}
 
 - Behaviour is the _primary_ organising principle
 - Interaction with the outside world is _secondary_
-- UI layout is a side-effect
+- UI is also a side-effect
 
 <br/>
 
@@ -367,9 +367,36 @@ fn render(view: ViewModel) {/*update UI*/}
 
 - Behaviour is the _primary_ organising principle
 - Interaction with the outside world is _secondary_
-- UI layout is a side-effect
+- UI is also a side-effect
 
 > “It does this… and looks like that!”
+
+---
+
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Ports and adapters
+
+![bg right:40% fit opacity:0.5 grayscale](../rust_nation_2023/crux.svg)
+
+> Allow an application to equally be driven by users, programs, automated test
+> or batch scripts, and to be developed and tested in isolation from its
+> eventual run-time devices and databases.
+
+Alistair Cockburn, 2005
+
+[Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/)
+
+---
+
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Ports and adapters
+
+![bg grayscale blur:5px opacity:0.1 fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f92f.svg)
+
+> The application can be deployed in ‘’headless’’ mode, so only the API is
+> available, and other programs can make use of its functionality
+
+Alistair Cockburn, 2005
+
+## [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/)
 
 ---
 
@@ -395,8 +422,7 @@ experimental, open source tooling for building _headless_ apps
 - Shared _behaviour_
 - Capabilities
 - Platform _native_ UX
-- At least one team does _Rust_ &nbsp;
-  ![h:35](../rust_nation_2023/rustacean-orig-noshadow.png)
+- _Rust_ yay! ![h:30](../rust_nation_2023/rustacean-orig-noshadow.png)
 
 ---
 
@@ -428,33 +454,6 @@ table th {
 </style>
 
 ![bg right:72% fit](../rust_nation_2023/benefit.png)
-
----
-
-# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Ports and adapters
-
-![bg right:40% fit opacity:0.5 grayscale](../rust_nation_2023/crux.svg)
-
-> Allow an application to equally be driven by users, programs, automated test
-> or batch scripts, and to be developed and tested in isolation from its
-> eventual run-time devices and databases.
-
-Alistair Cockburn,
-[“Hexagonal architecture“](https://alistair.cockburn.us/hexagonal-architecture/),
-2005
-
----
-
-# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Ports and adapters
-
-![bg grayscale blur:5px opacity:0.1 fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f92f.svg)
-
-> The application can be deployed in ‘’headless’’ mode, so only the API is
-> available, and other programs can make use of its functionality
-
-Alistair Cockburn,
-[“Hexagonal architecture“](https://alistair.cockburn.us/hexagonal-architecture/),
-2005
 
 ---
 
