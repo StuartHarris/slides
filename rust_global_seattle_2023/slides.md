@@ -32,7 +32,7 @@ style: |
     vertical-align: top;
   }
 backgroundColor: #303030
-transition: fade 250ms
+transition: fade 300ms
 ---
 
 ![bg right vertical fit](https://events.linuxfoundation.org/wp-content/uploads/2023/06/Rust-Global-white.svg)
@@ -185,51 +185,82 @@ We build a _core_ that encapsulates our app’s behavior:
 
 ---
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Elm, Redux, etc.
-
-<div class="morph" style="--morph-name:update;">
-
-A _pure_ update function
-
-```rust
-fn update(event: Event, state: State) -> (State, Vec<Effect>)
-```
-
-</div>
-
----
-
 <!--transition: fade 600ms-->
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) UI as a projection of state
+<div class="morph" style="--morph-name:title;">
 
-Just like React _used to be_, we imagine the UI as a projection of the model
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behavior
 
-<div class="morph" style="--morph-name:view;">
+</div>
+<div class="morph" style="--morph-name:update;">
+A pure update function (cf. Elm, Redux, etc.)
 
 ```rust
-fn view(s: State) -> {/*update UI*/}
+fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
 ```
 
 </div>
 
 ---
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Platform independence
+<div class="morph" style="--morph-name:title;">
 
-Introduce a _view model_ to abstract the view
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behavior with side-effects
 
-<div class="morph" style="--morph-name:view;">
+</div>
+<div class="morph" style="--morph-name:update;">
+A pure update function (cf. Elm, Redux, etc.)
 
 ```rust
-fn view(s: State) -> ViewModel
+fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
+```
+
+</div>
+<div class="morph" style="--morph-name:http;">
+Execute side-effects
+
+```rust
+fn http(effect: Effect) {/*perform HTTP request*/}
+```
+
+</div>
+
+---
+
+<div class="morph" style="--morph-name:title;">
+
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) UI
+
+</div>
+<div class="morph" style="--morph-name:view;">
+Just like React used to be, we imagine the UI as a projection of state
+
+```rust
+fn view(state: Model) {/*update UI*/}
+```
+
+</div>
+
+---
+
+<div class="morph" style="--morph-name:title;">
+
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) UI with platform independence
+
+</div>
+<div class="morph" style="--morph-name:view;">
+Just like React used to be, we imagine the UI as a projection of state
+
+```rust
+fn view(state: Model) -> ViewModel
 ```
 
 </div>
 <div class="morph" style="--morph-name:render;">
+Introduce a view model
 
 ```rust
-fn render(view: ViewModel) -> {/*update UI*/}
+fn render(view: ViewModel) {/*update UI*/}
 ```
 
 </div>
@@ -238,36 +269,36 @@ fn render(view: ViewModel) -> {/*update UI*/}
 
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Before
 
-All the _Behavior_
+_Behavior_
 
 <div class="morph" style="--morph-name:update;">
 
 ```rust
-fn update(event: Event, state: State) -> (State, Vec<Effect>)
+fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
 ```
 
 </div>
 <div class="morph" style="--morph-name:http;">
 
 ```rust
-fn http(e: Effect) -> {/*perform HTTP request*/}
+fn http(effect: Effect) {/*perform HTTP request*/}
 ```
 
 </div>
 
-_UI_ as a projection of state
+_UI_
 
 <div class="morph" style="--morph-name:view;">
 
 ```rust
-fn view(s: State) -> ViewModel
+fn view(state: Model) -> ViewModel
 ```
 
 </div>
 <div class="morph" style="--morph-name:render;">
 
 ```rust
-fn render(view: ViewModel) -> {/*update UI*/}
+fn render(view: ViewModel) {/*update UI*/}
 ```
 
 </div>
@@ -278,36 +309,36 @@ fn render(view: ViewModel) -> {/*update UI*/}
 
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) After
 
-A pure _Core_
+_Core_
 
 <div class="morph" style="--morph-name:update;">
 
 ```rust
-fn update(event: Event, state: State) -> (State, Vec<Effect>)
+fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
 ```
 
 </div>
 <div class="morph" style="--morph-name:view;">
 
 ```rust
-fn view(s: State) -> ViewModel
+fn view(state: Model) -> ViewModel
 ```
 
 </div>
 
-A _Shell_ for side-effects
+_Shell_
 
 <div class="morph" style="--morph-name:http;">
 
 ```rust
-fn http(e: Effect) -> {/*perform HTTP request*/}
+fn http(effect: Effect) {/*perform HTTP request*/}
 ```
 
 </div>
 <div class="morph" style="--morph-name:render;">
 
 ```rust
-fn render(view: ViewModel) -> {/*update UI*/}
+fn render(view: ViewModel) {/*update UI*/}
 ```
 
 </div>
