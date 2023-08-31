@@ -104,10 +104,9 @@ experimental, open source tooling for building _headless_ apps
 ## It's too hard to "build quality in"
 
 - Historically, a lack of good _tooling_ has lead to a poor developer experience
-  for multi-platform app development, resulting in applications that are _hard
-  to test_ and maintain.
+  for multi-platform app development
 
-- Poor _architectures_ make it even harder
+- Bad _architectures_ make applications _hard to test_ and maintain
 
 ---
 
@@ -119,23 +118,32 @@ table th {
 }
 </style>
 
-|             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter | Crux |
-| ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: | :--: |
-| Native UX   |       ✅        |    ✅     |     😐️      |       ❌        |   ❌    |  ✅  |
-| Web?        |       ❌        |    😐️    |     😐️      |       ✅        |   ✅    |  ✅  |
-| Development |       😐️       |    ✅     |     😐️      |       ✅        |   ✅    |  ✅  |
-| Testing     |       😐️       |    😐️    |      🤯      |       🤯        |   😐️   |  🤩  |
-| Maintenance |       😐️       |    ✅     |      😡      |       😡        |   ✅    |  ✅  |
-| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   | 1.4x |
+|             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter |
+| ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: |
+| Native UX   |       ✅        |    ✅     |     😐️      |       ❌        |   ❌    |
+| Web?        |       ❌        |    😐️    |     😐️      |       ✅        |   ✅    |
+| Development |       😐️       |    ✅     |     😐️      |       ✅        |   ✅    |
+| Testing     |       😐️       |    😐️    |      🤯      |       🤯        |   😐️   |
+| Maintenance |       😐️       |    ✅     |      😡      |       😡        |   ✅    |
+| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   |
 
 ---
 
 # ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) UI-centric architecture
 
-> “It looks like this… and does that”
+- UI layout is the _primary_ organising principle
+- Behaviour and interaction with the outside world are _secondary_
 
-- UI layout is the _primary_ organizing principle
-- Behavior and interaction with the outside world are _secondary_
+<br/>
+
+---
+
+# ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) UI-centric architecture
+
+- UI layout is the _primary_ organising principle
+- Behaviour and interaction with the outside world are _secondary_
+
+> “It looks like this… and does that”
 
 ---
 
@@ -175,9 +183,9 @@ experimental, open source tooling for building _headless_ apps
 
 ---
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) What if we start with behavior?
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) What if we start with behaviour?
 
-We build a _core_ that encapsulates our app’s behavior:
+We build a _core_ that encapsulates our app’s behaviour:
 
 - updates a _model_ in response to _events_
 - emits _effects_ — intent to perform side-effects
@@ -189,7 +197,7 @@ We build a _core_ that encapsulates our app’s behavior:
 
 <div class="morph" style="--morph-name:title;">
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behavior
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behaviour
 
 </div>
 <div class="morph" style="--morph-name:update;">
@@ -205,7 +213,7 @@ fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
 
 <div class="morph" style="--morph-name:title;">
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behavior with side-effects
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behaviour with side-effects
 
 </div>
 <div class="morph" style="--morph-name:update;">
@@ -217,7 +225,7 @@ fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
 
 </div>
 <div class="morph" style="--morph-name:http;">
-Execute side-effects
+A dirty function with side-effects
 
 ```rust
 fn http(effect: Effect) {/*perform HTTP request*/}
@@ -345,13 +353,23 @@ fn render(view: ViewModel) {/*update UI*/}
 
 ---
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behavior-centric architecture
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behaviour-centric architecture
 
-> “It does this… and looks like that!”
-
-- Behavior is the _primary_ organizing principle
+- Behaviour is the _primary_ organising principle
 - Interaction with the outside world is _secondary_
 - UI layout is a side-effect
+
+<br/>
+
+---
+
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behaviour-centric architecture
+
+- Behaviour is the _primary_ organising principle
+- Interaction with the outside world is _secondary_
+- UI layout is a side-effect
+
+> “It does this… and looks like that!”
 
 ---
 
@@ -466,7 +484,11 @@ Type generation with `serde-generate`
 
 ---
 
+<div class="morph" style="--morph-name:title;">
+
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Capabilities
+
+</div
 
 Fire and forget
 
@@ -488,7 +510,11 @@ caps.sse.get_json(API_URL, Event::Update);
 
 ---
 
+<div class="morph" style="--morph-name:title;">
+
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Capabilities
+
+</div>
 
 - Built-in (`Render`)
 
@@ -583,7 +609,7 @@ mod test {
 
 <!-- prettier-ignore -->
 * a lightweight runtime
-  * for headless, multi-platform, composable apps with shared _behavior_
+  * for headless, multi-platform, composable apps with shared _behaviour_
   * for better _testability_
   * for higher _quality_
   * for better _reliability_, safety, and security
