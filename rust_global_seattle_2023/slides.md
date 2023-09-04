@@ -80,8 +80,9 @@ experimental, open source tooling for building _headless_ apps
 
 ---
 
-![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) _What_ is the
-problem with multi-platform app development today?
+![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900)
+<span class="morph" style="--morph-name:title;">_What_ is the problem with
+multi-platform app development today?</span>
 
 ![2](https://icongr.am/material/numeric-2-circle.svg?color=666666) _Rust_,
 _WebAssembly_, and _Ports and Adapters_
@@ -93,13 +94,34 @@ experimental, open source tooling for building _headless_ apps
 
 ![1 w:256 h:256](https://icongr.am/material/numeric-1-circle.svg?color=ff9900)
 
-# The problem
+# <span class="morph" style="--morph-name:title;">_What_ is the problem with multi-platform app development today?</span>
 
 <style scoped>section figure { margin-right: 100px !important; }</style>
 
 ![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f469-200d-1f527.svg)
 
 ---
+
+<!--
+I am sick of poor quality software — apps that just don't work well.
+
+We can do much better.
+
+Great tools are crucial for building great software,
+
+and we have THE BEST tools available in Rust and WebAssembly.
+
+And we have modern declarative UI frameworks on every platform.
+
+The world is only just beginning to understand the power of Rust and WebAssembly.
+
+But the architecture of our apps is also important.
+"A bad workman blames his tools"
+
+Building quality in is hard.
+
+And it starts with being able to test our apps comprehensively and easily.
+-->
 
 # ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) Tooling and Architecture
 
@@ -152,8 +174,9 @@ table th {
 ![1](https://icongr.am/material/numeric-1-circle.svg?color=666666) _What_ is the
 problem with multi-platform app development today?
 
-![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) _Rust_,
-_WebAssembly_, and _Ports and Adapters_
+![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900)
+<span class="morph" style="--morph-name:title;">_Rust_, _WebAssembly_, and
+_Ports and Adapters_</span>
 
 ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) _Crux_ —
 experimental, open source tooling for building _headless_ apps
@@ -162,26 +185,40 @@ experimental, open source tooling for building _headless_ apps
 
 ![2 w:256 h:256](https://icongr.am/material/numeric-2-circle.svg?color=ff9900)
 
-# The solution
+# <span class="morph" style="--morph-name:title;">_Rust_, _WebAssembly_, and _Ports and Adapters_</span>
 
 ![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/0/0f/Original_Ferris.svg)
 
 ---
 
+<!--
+
+We’re on the cusp of understanding how much of a revolution Rust really is.
+
+Everyone can suddenly build rock-solid and reliable, high quality software in almost any space.
+
+WebAssembly is our delivery mechanism. Taking Rust to the web browser.
+
+The testing story for mobile and web apps is currently terrible.
+
+And it will never be good until we look closely at how we architect applications.
+
+-->
+
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Better Tools and Better Architecture
 
 - **Rust** is a _revolution_
 
-  - everyone can now build reliable, high quality software in almost any space
-    — perfect for multi-platform app development
+  everyone can now build reliable, high quality software in almost any space
+  — perfect for multi-platform app development
 
 - **WebAssembly** is a _revolution_
 
-  - fast and portable — great for building apps in the languages we love
+  fast and portable — great for building apps in the languages we love
 
 - **Ports and Adapters** is a _revolution_
 
-  - portable and easy to test — easy to build high quality apps
+  portable and easy to test — great for building high quality apps
 
 ---
 
@@ -203,19 +240,21 @@ We build a _core_ that encapsulates our app’s behaviour:
 
 </div>
 <div class="morph" style="--morph-name:update;">
-A pure update function (cf. Elm, Redux, etc.)
+Update state when an Event is raised
 
 ```rust
-fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
+fn update(event: Event, state: Model) -> Model {
+  // perform HTTP request
+}
 ```
 
-</div>
+## </div>
 
 ---
 
 <div class="morph" style="--morph-name:title;">
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behaviour with side-effects
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behaviour
 
 </div>
 <div class="morph" style="--morph-name:update;">
@@ -230,7 +269,7 @@ fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
 A dirty function with side-effects
 
 ```rust
-fn http(effect: Effect) {/*perform HTTP request*/}
+fn http(effect: Effect) { /* perform HTTP request */ }
 ```
 
 </div>
@@ -246,7 +285,7 @@ fn http(effect: Effect) {/*perform HTTP request*/}
 Imagine the UI as a projection of state (cf. early React)
 
 ```rust
-fn view(state: Model) {/*update UI*/}
+fn view(state: Model) { /* update UI */ }
 ```
 
 </div>
@@ -255,11 +294,11 @@ fn view(state: Model) {/*update UI*/}
 
 <div class="morph" style="--morph-name:title;">
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) UI with platform independence
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) UI
 
 </div>
 <div class="morph" style="--morph-name:view;">
-Imagine the UI as a projection of state (cf. early React)
+A pure view function
 
 ```rust
 fn view(state: Model) -> ViewModel
@@ -267,10 +306,10 @@ fn view(state: Model) -> ViewModel
 
 </div>
 <div class="morph" style="--morph-name:render;">
-Introduce a view model
+A dirty function — UI is a side-effect
 
 ```rust
-fn render(view: ViewModel) {/*update UI*/}
+fn render(view: ViewModel) { /* update UI */ }
 ```
 
 </div>
@@ -291,7 +330,7 @@ fn update(event: Event, state: Model) -> (Model, Vec<Effect>)
 <div class="morph" style="--morph-name:http;">
 
 ```rust
-fn http(effect: Effect) {/*perform HTTP request*/}
+fn http(effect: Effect) { /* perform HTTP request */ }
 ```
 
 </div>
@@ -308,7 +347,7 @@ fn view(state: Model) -> ViewModel
 <div class="morph" style="--morph-name:render;">
 
 ```rust
-fn render(view: ViewModel) {/*update UI*/}
+fn render(view: ViewModel) { /* update UI */ }
 ```
 
 </div>
@@ -341,14 +380,14 @@ _Shell_
 <div class="morph" style="--morph-name:http;">
 
 ```rust
-fn http(effect: Effect) {/*perform HTTP request*/}
+fn http(effect: Effect) { /* perform HTTP request */ }
 ```
 
 </div>
 <div class="morph" style="--morph-name:render;">
 
 ```rust
-fn render(view: ViewModel) {/*update UI*/}
+fn render(view: ViewModel) { /* update UI */ }
 ```
 
 </div>
@@ -377,7 +416,7 @@ fn render(view: ViewModel) {/*update UI*/}
 
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Ports and adapters
 
-![bg right:40% fit opacity:0.5 grayscale](../rust_nation_2023/crux.svg)
+![bg right:40% fit](../rust_nation_2023/crux.svg)
 
 > Allow an application to equally be driven by users, programs, automated test
 > or batch scripts, and to be developed and tested in isolation from its
@@ -414,7 +453,7 @@ WebAssembly helps us stay honest!
 
 ---
 
-![bg right:50% fit](../rust_nation_2023/crux.svg)
+![bg right:50% fit opacity:0.5 grayscale](../rust_nation_2023/crux.svg)
 
 ![1](https://icongr.am/material/numeric-1-circle.svg?color=666666) _What_ is the
 problem with multi-platform app development today?
@@ -469,7 +508,7 @@ table th {
 
 ---
 
-# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) _Any_ client
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) _Any_ platform
 
 | platform |  language  |   UI    | library |    lib name    |       FFI        |
 | -------- | :--------: | :-----: | :-----: | :------------: | :--------------: |
