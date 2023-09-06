@@ -102,6 +102,25 @@ experimental, open source tooling for building _headless_ apps
 
 ---
 
+# ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) Building a multi-platform app (don’t @ me!)
+
+<style scoped>
+table th {
+    width: 16%;
+}
+</style>
+
+|             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter |
+| ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: |
+| Native UX   |       ✅        |    ✅     |     😐️      |       ❌        |   ❌    |
+| Web?        |       ❌        |    😐️    |     😐️      |       ✅        |   ✅    |
+| Development |       😐️       |    ✅     |     😐️      |       ✅        |   ✅    |
+| Testing     |       😐️       |    😐️    |      🤯      |       🤯        |   😐️   |
+| Maintenance |       😐️       |    ✅     |      😡      |       😡        |   ✅    |
+| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   |
+
+---
+
 <!--
 I am sick of poor quality software — apps that just don't work well.
 
@@ -125,40 +144,11 @@ And it starts with being able to test our apps comprehensively and easily.
 
 # ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) Tooling and Architecture
 
-## It's too hard to "build quality in"
+## Building quality apps across all platforms is too hard
 
-- Historically, a lack of good _tooling_ has lead to a poor developer experience
-  for multi-platform app development
+- In order to reuse code we end up _compromising_ on UX and/or DX
 
-- Bad _architectures_ make applications _hard to test_ and maintain
-
----
-
-# ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) Building a multi-platform app (don’t @ me!)
-
-<style scoped>
-table th {
-    width: 16%;
-}
-</style>
-
-|             | Platform Native | Kotlin MM | React Native | Capacitor Ionic | Flutter |
-| ----------- | :-------------: | :-------: | :----------: | :-------------: | :-----: |
-| Native UX   |       ✅        |    ✅     |     😐️      |       ❌        |   ❌    |
-| Web?        |       ❌        |    😐️    |     😐️      |       ✅        |   ✅    |
-| Development |       😐️       |    ✅     |     😐️      |       ✅        |   ✅    |
-| Testing     |       😐️       |    😐️    |      🤯      |       🤯        |   😐️   |
-| Maintenance |       😐️       |    ✅     |      😡      |       😡        |   ✅    |
-| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   |
-
----
-
-# ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) UI-centric architecture
-
-- UI layout is the _primary_ organising principle
-- Behaviour and interaction with the outside world are _secondary_
-
-<br/>
+- UI-centric _architectures_ make applications _hard to test_ and maintain
 
 ---
 
@@ -218,17 +208,16 @@ And it will never be good until we look closely at how we architect applications
 
 - **Ports and Adapters** is a _revolution_
 
-  portable and easy to test — great for building high quality apps
+  behaviour-centric architecture — leads to better testability
 
 ---
 
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) What if we start with behaviour?
 
-We build a _core_ that encapsulates our app’s behaviour:
+But how do we model behaviour?
 
-- updates a _model_ in response to _events_
-- emits _effects_ — intent to perform side-effects
-- is _pure_ (can be easily tested)
+- update a _model_ in response to _events_
+- emit _effects_ — intent to perform side-effects
 
 ---
 
@@ -358,7 +347,7 @@ fn render(view: ViewModel) { /* update UI */ }
 
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) After
 
-_Core_
+_Core_ (pure)
 
 <div class="morph" style="--morph-name:update;">
 
@@ -375,7 +364,7 @@ fn view(state: Model) -> ViewModel
 
 </div>
 
-_Shell_
+_Shell_ (dirty)
 
 <div class="morph" style="--morph-name:http;">
 
@@ -394,13 +383,15 @@ fn render(view: ViewModel) { /* update UI */ }
 
 ---
 
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Behaviour-centric architecture
+# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) WebAssembly
 
-- Behaviour is the _primary_ organising principle
-- Interaction with the outside world is _secondary_
-- UI is also a side-effect
+<style scoped>section figure { margin-right: 100px !important; }</style>
 
-<br/>
+![bg right:30% fit](./wasm.svg)
+
+WebAssembly helps us stay honest!
+
+![h:60](./wasm-ferris.png)
 
 ---
 
@@ -432,24 +423,12 @@ Alistair Cockburn, 2005
 
 ![bg grayscale blur:5px opacity:0.1 fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f92f.svg)
 
-> The application can be deployed in ‘’headless’’ mode, so only the API is
+> The application can be deployed in _headless_ mode, so only the API is
 > available, and other programs can make use of its functionality
 
 Alistair Cockburn, 2005
 
 ## [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/)
-
----
-
-# ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) WebAssembly
-
-<style scoped>section figure { margin-left: 100px !important; }</style>
-
-![bg left:30% fit](./wasm.svg)
-
-WebAssembly helps us stay honest!
-
-![h:60](./wasm-ferris.png)
 
 ---
 
@@ -466,16 +445,17 @@ experimental, open source tooling for building _headless_ apps
 
 ---
 
-# ![3 w:256 h:256](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) ![Crux](../rust_nation_2023/crux_logo.svg)
+# ![3 w:256 h:256](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Crux
 
-![bg right 60%](../rust_nation_2023/sticker.svg)
+![bg right 50%](../rust_nation_2023/sticker.svg)
 
 - Shared _behaviour_
-- Capabilities
-- Platform _native_ UX
-- _Rust_ yay! ![h:30](../rust_nation_2023/rustacean-orig-noshadow.png)
 
----
+- in _Rust_ ![h:30](../rust_nation_2023/rustacean-orig-noshadow.png)
+
+- Platform _native_ UX
+
+<!-- ---
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Building a multi-platform app (don’t @ me!)
 
@@ -492,31 +472,39 @@ table th {
 | Development |       😐️       |    ✅     |     😐️      |       ✅        |   ✅    |  ✅  |
 | Testing     |       😐️       |    😐️    |      🤯      |       🤯        |   😐️   |  🤩  |
 | Maintenance |       😐️       |    ✅     |      😡      |       😡        |   ✅    |  ✅  |
-| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   | 1.4x |
+| Effort      |       3x        |    2x     |      2x      |      1.5x       |  1.4x   | 1.4x | -->
 
 ---
 
-# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Who benefits?
+<!--
+_footer: "Rust Global @ WasmCon<br/>Seattle 2023"
+-->
 
-<style scoped>
-table th {
-    width: 14%;
-}
-</style>
-
-![bg right:72% fit](../rust_nation_2023/benefit.png)
+![bg](https://raw.githubusercontent.com/redbadger/crux/master/examples/counter/counter.webp)
 
 ---
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) _Any_ platform
 
-| platform |  language  |   UI    | library |    lib name    |       FFI        |
-| -------- | :--------: | :-----: | :-----: | :------------: | :--------------: |
-| iOS      |   Swift    | SwiftUI | static  | `libshared.a`  | `uniffi-bindgen` |
-| Android  |   Kotlin   | Compose | dynamic | `libshared.so` | `uniffi-bindgen` |
-| Web      | TypeScript |  Remix  |  wasm   | `shared.wasm`  |  `wasm-bindgen`  |
-| Web      |    Rust    | Leptos  |  crate  |                |                  |
-| CLI      |    Rust    |         |  crate  |                |                  |
+| platform |  language  |      UI      | library |    lib name    |       FFI        |
+| -------- | :--------: | :----------: | :-----: | :------------: | :--------------: |
+| iOS      |   Swift    |   SwiftUI    | static  | `libshared.a`  | `uniffi-bindgen` |
+| Android  |   Kotlin   |   Compose    | dynamic | `libshared.so` | `uniffi-bindgen` |
+| Web      | TypeScript |    Remix     | _wasm_  | `shared.wasm`  |  `wasm-bindgen`  |
+| Web      |    Rust    |    Leptos    |  crate  |                |                  |
+| CLI      |    Rust    | `println!()` |  crate  |                |                  |
+
+---
+
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) FFI
+
+```rust
+namespace shared {
+  bytes process_event([ByRef] bytes msg);
+  bytes handle_response([ByRef] bytes uuid, [ByRef] bytes res);
+  bytes view();
+};
+```
 
 Type generation with `serde-generate`
 
@@ -538,24 +526,25 @@ Type generation with `serde-generate`
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Capabilities
 
-</div
-
-Fire and forget
+</div>
 
 ```rust
-caps.render.render();
-```
+// fire and forget
+caps.render
+  .render();
 
-Request/response
+// request/response
+caps.http
+  .post(API_URL)
+  .header("Authorization", token)
+  .body_json(json)
+  .expect("could not serialize body")
+  .expect_json()
+  .send(Event::Created);
 
-```rust
-caps.http.get(API_URL).expect_json().send(Event::Set);
-```
-
-Streaming
-
-```rust
-caps.sse.get_json(API_URL, Event::Update);
+// streamed responses
+caps.sse
+  .get_json(API_URL, Event::Update);
 ```
 
 ---
@@ -615,6 +604,12 @@ impl crux_core::App for App {
 
 ---
 
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) What does testing look like?
+
+![bg left](../rust_in_the_enterprise//jenkins-fire.webp)
+
+---
+
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) What does a test look like?
 
 ```rust
@@ -643,27 +638,21 @@ mod test {
 
 ---
 
-![bg right cover](../rust_nation_2023/crux-bg.svg)
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) 17ms
 
-# ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Demo
-
-## Headless app development in Rust
+## ![bg right:60% fit](../rust_in_the_enterprise//notes_tests.webp)
 
 ---
 
+![bg left:40% cover](../rust_nation_2023/crux-bg.svg)
+
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) The crux of Crux
 
-<style scoped>section figure { margin-left: 100px !important; }</style>
-
-![bg left:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f970.svg)
-
-<!-- prettier-ignore -->
-* a lightweight runtime
-  * for headless, multi-platform, composable apps with shared _behaviour_
-  * for better _testability_
-  * for higher _quality_
-  * for better _reliability_, safety, and security
-  * and more _joy_ from better tools
+- headless, multi-platform, composable apps with shared _behaviour_
+- better _testability_
+- higher _quality_ apps
+- better _reliability_, safety, and security
+- more _joy_ from better tools
 
 ---
 
