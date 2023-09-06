@@ -620,7 +620,7 @@ mod test {
 
     #[test]
     fn increments_count() {
-        let app = AppTester::<Hello, _>::default();
+        let app = AppTester::<App, _>::default();
         let mut model = Model::default();
 
         let update = app.update(Event::Increment, &mut model);
