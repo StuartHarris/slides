@@ -648,10 +648,11 @@ mod test {
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) The crux of Crux
 
-- headless, multi-platform, composable apps with shared _behaviour_
+github.com/redbadger/_crux_
+
+- _headless_, multi-platform, composable apps with shared _behaviour_
 - better _testability_
 - higher _quality_ apps
-- better _reliability_, safety, and security
 - more _joy_ from better tools
 
 ---
