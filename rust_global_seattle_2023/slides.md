@@ -121,27 +121,6 @@ table th {
 
 ---
 
-<!--
-I am sick of poor quality software — apps that just don't work well.
-
-We can do much better.
-
-Great tools are crucial for building great software,
-
-and we have THE BEST tools available in Rust and WebAssembly.
-
-And we have modern declarative UI frameworks on every platform.
-
-The world is only just beginning to understand the power of Rust and WebAssembly.
-
-But the architecture of our apps is also important.
-"A bad workman blames his tools"
-
-Building quality in is hard.
-
-And it starts with being able to test our apps comprehensively and easily.
--->
-
 # ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) Tooling and Architecture
 
 ## Building quality apps across all platforms is too hard
@@ -180,20 +159,6 @@ experimental, open source tooling for building _headless_ apps
 ![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/0/0f/Original_Ferris.svg)
 
 ---
-
-<!--
-
-We’re on the cusp of understanding how much of a revolution Rust really is.
-
-Everyone can suddenly build rock-solid and reliable, high quality software in almost any space.
-
-WebAssembly is our delivery mechanism. Taking Rust to the web browser.
-
-The testing story for mobile and web apps is currently terrible.
-
-And it will never be good until we look closely at how we architect applications.
-
--->
 
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Better Tools and Better Architecture
 
