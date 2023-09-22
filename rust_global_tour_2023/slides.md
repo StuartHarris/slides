@@ -1019,18 +1019,6 @@ github.com/redbadger/_crux_
 
 ---
 
-# Thank you!
-
-<style scoped>section figure { margin-right: 100px !important; }</style>
-
-![bg right:30% fit](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f64f.svg)
-
-[@stuartharris](https://twitter.com/stuartharris)
-
-[@charypar](https://twitter.com/charypar)
-
----
-
 # Why Rust?
 
 - https://aws.amazon.com/blogs/opensource/sustainability-with-rust/
@@ -1061,4 +1049,13 @@ github.com/redbadger/_crux_
 
 ---
 
-![QR code](./qr.webp)
+# Thank you!
+
+<style scoped>section figure { margin-right: 100px !important; }</style>
+
+![fit h:100](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f64f.svg)
+
+[@stuartharris](https://twitter.com/stuartharris)
+[@charypar](https://twitter.com/charypar)
+
+![bg right:40% fit QR code](./qr.webp)
