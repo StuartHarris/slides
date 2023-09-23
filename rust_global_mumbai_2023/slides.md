@@ -88,7 +88,7 @@ footer: "Rust in the Enterprise"
 - Software engineer
 - Founder of Red Badger
 
-## ![h:80px](../assets/RB_Screen_Logos_Artwork-02.svg)
+![h:80px](../assets/RB_Screen_Logos_Artwork-02.svg)
 
 ---
 
