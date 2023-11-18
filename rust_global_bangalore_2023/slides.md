@@ -51,12 +51,11 @@ transition: fade 300ms
 [5a]: https://icongr.am/material/numeric-5-circle.svg?color=ff9900
 [6a]: https://icongr.am/material/numeric-6-circle.svg?color=ff9900
 
-![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/0/0f/Original_Ferris.svg)
-![h:80px](../assets/RB_Screen_Logos_Artwork-02.svg)
+![bg right:50% fit](./logos.webp)
 
 # Rust in the Enterprise
 
-2023-09-23
+2023-11-18
 
 Stuart Harris and Viktor Charypar
 
@@ -321,6 +320,19 @@ Compliance_ — operate safely in a regulated environment</span>
 
 ---
 
+# ![5][5a] Certifications and Specification
+
+- Ferrocene, from Ferrous Systems — ISO 26262 (ASIL D) and IEC 61508 (SIL 4)
+  https://ferrous-systems.com/ferrocene/
+- Rust Foundation creates Specification team
+  https://blog.rust-lang.org/inside-rust/2023/11/15/spec-vision.html
+
+<style scoped>section figure { margin-right: 100px !important; }</style>
+
+![bg right:40% fit](./ferrocene_logo_horizontal.svg)
+
+---
+
 # ![5][5a] Rust and WebAssembly
 
 - Rust and Wasm are a perfect match
@@ -335,13 +347,12 @@ Compliance_ — operate safely in a regulated environment</span>
 
 # ![5][5a] <span class="morph" style="--morph-name:wasm;">**WebAssembly** is a _revolution_</span>
 
-![bg right contain](https://d33wubrfki0l68.cloudfront.net/dbe8acea017ac1ca11dbd8f5bc7034bd67847b1a/8f9ac/assets/images/wasifills_fig4-14e087daebfce1bef3b7b2982cbfb9b2.png)
+![bg 50% right](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WebAssembly_Logo.svg/1200px-WebAssembly_Logo.svg.png)
 
-WebAssembly Component Model
+<!-- ![bg fit right](https://mma.prnewswire.com/media/1601382/cosmonic_Logo.jpg?p=twitter)
+![bg fit right](https://www.fermyon.com/static/image/twc_intro-spin.png) -->
 
-WIT
-
-https://cosmonic.com/blog/engineering/gap-bridging-with-wasifills
+![fit](https://www.fermyon.com/static/image/spin-twcm-wasi.png)
 
 ---
 
@@ -1031,6 +1042,7 @@ github.com/redbadger/_crux_
 
 # Rust adoption in the enterprise
 
+- https://corrode.dev/why-rust/
 - https://www.infoq.com/presentations/rust-adoption-journey/
 - https://rustmagazine.org/issue-1/2022-review-the-adoption-of-rust-in-business/
 - https://vercel.com/blog/turborepo-migration-go-rust
