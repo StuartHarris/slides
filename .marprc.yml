@@ -1,6 +1,6 @@
 allowLocalFiles: true
 options:
-  looseYAML: false
+  # looseYAML: false
   markdown:
     breaks: false
 bespoke:

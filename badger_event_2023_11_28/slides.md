@@ -38,7 +38,6 @@ style: |
     contain: layout;
     vertical-align: middle;
   }
-# backgroundColor: #303030
 transition: fade 300ms
 ---
 
@@ -118,35 +117,7 @@ footer: "Mapping the Future of Sustainable Digital Products"
 
 ---
 
-## Three revolutions
-
-![1][1a] <span class="morph" style="--morph-name:rust;">**Rust** is a
-_revolution_ in sustainable software engineering</span>
-
-![2][2] WebAssembly
-
-![3][3] Next-gen platforms
-
----
-
-# ![1 h:150 w:150][1a] <span class="morph" style="--morph-name:rust;">**Rust** is a _revolution_ in sustainable software engineering</span>
-
-> "Everyone has a part to play."
-
-> "Sustainability is enough, all by itself, to justify our work."
-
-![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/0/0f/Original_Ferris.svg)
-
----
-
-![h:540 center](https://corrode.dev/why-rust/energy-consumption.svg)
-
-> [Why Rust in production?](https://corrode.dev/why-rust/),
-> [Sustainability with Rust](https://aws.amazon.com/blogs/opensource/sustainability-with-rust/)
-
----
-
-# ![1][1a] Sustainable Software Engineering
+# Sustainable Software Engineering
 
 > Find as many "Carbon Proxies" as you can
 
@@ -160,13 +131,43 @@ _revolution_ in sustainable software engineering</span>
 
 ---
 
-![h:540 center](https://corrode.dev/why-rust/bug-costs.svg)
+## Three revolutions
+
+![1][1a] <span class="morph" style="--morph-name:rust;">**Rust** is a
+_revolution_ in sustainable software engineering</span>
+
+![2][2] WebAssembly
+
+![3][3] Next-gen platforms
+
+---
+
+# ![1 h:150 w:150][1a] <span class="morph" style="--morph-name:rust;">**Rust** is a _revolution_ in sustainable software engineering</span>
+
+![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/0/0f/Original_Ferris.svg)
+
+---
+
+<style scoped>section { --color-canvas-default: #808080 }</style>
+
+![h:540 center](https://corrode.dev/why-rust/energy-consumption.svg)
+
+> [Why Rust in production?](https://corrode.dev/why-rust/),
+> [Sustainability with Rust](https://aws.amazon.com/blogs/opensource/sustainability-with-rust/)
+
+---
+
+<style scoped>section { --color-canvas-default: #808080 }</style>
+
+![h:540 center](https://corrode.dev/why-rust/robustness.svg)
 
 > [Why Rust in production?](https://corrode.dev/why-rust/)
 
 ---
 
-![h:540 center](https://corrode.dev/why-rust/robustness.svg)
+<style scoped>section { --color-canvas-default: #808080 }</style>
+
+![h:540 center](https://corrode.dev/why-rust/bug-costs.svg)
 
 > [Why Rust in production?](https://corrode.dev/why-rust/)
 
@@ -221,10 +222,14 @@ platforms</span>
 
 # **Cosmonic** and _wasmCloud_
 
+> "The next-gen Kubernetes"
+
 > [https://cosmonic.com/](https://cosmonic.com/),
 > [https://wasmcloud.com/](https://wasmcloud.com/)
 
 # **Fermyon** and _Spin_
+
+> "The next-gen AWS Lambda"
 
 > [https://www.fermyon.com/](https://www.fermyon.com/),
 > [https://www.fermyon.com/spin](https://www.fermyon.com/spin),
@@ -239,22 +244,6 @@ platforms</span>
 ![2][2a] WebAssembly
 
 ![3][3a] Next-gen platforms
-
----
-
-# 6 principles of sustainable software engineering
-
-1. _Carbon efficiency_ — minimize the amount of carbon emitted per unit of work
-2. _Energy efficiency_ — the more you utilize a computer, the more efficient it
-   becomes at converting electricity to useful computing operations
-3. _Carbon awareness_ — Shifting demand to times when carbon intensity is low
-4. _Hardware efficiency_ — reduce embodied carbon by extending the life of
-   hardware
-5. _Measurement_ — measure the carbon footprint of your software
-6. _Climate commitments_ — net zero (abate/eliminate) vs. carbon neutral
-   (offset)
-
-> [25 minute overview](https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/)
 
 ---
 
