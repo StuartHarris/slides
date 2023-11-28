@@ -15,6 +15,10 @@ style: |
     font-weight: bold;
     color: #F24A01;
   }
+  img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+  }
   img[alt="1"] { view-transition-name: one; contain: layout; /* required */ }
   img[alt="2"] { view-transition-name: two; contain: layout; /* required */ }
   img[alt="3"] { view-transition-name: three; contain: layout; /* required */ }
@@ -34,7 +38,7 @@ style: |
     contain: layout;
     vertical-align: middle;
   }
-backgroundColor: #303030
+# backgroundColor: #303030
 transition: fade 300ms
 ---
 
@@ -86,7 +90,7 @@ footer: "Mapping the Future of Sustainable Digital Products"
 - Software engineer
 - Founder of Red Badger
 
-[@stuartharris](https://twitter.com/stuartharris)
+> [@stuartharris](https://twitter.com/stuartharris)
 
 ## ![h:80px](../assets/RB_Screen_Logos_Artwork-02.svg)
 
@@ -101,11 +105,16 @@ footer: "Mapping the Future of Sustainable Digital Products"
 4. _Hardware efficiency_ — reduce embodied carbon by extending the life of
    hardware
 5. _Measurement_ — measure the carbon footprint of your software
-6. _Carbon commitments_ — carbon neutral vs. net zero
+6. _Climate commitments_ — net zero (abate/eliminate) vs. carbon neutral
+   (offset)
+
+> [25 minute overview](https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/)
 
 ---
 
-![bg](https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/media/7-measurement-sci-image.jpg)
+![h:540 center](https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/media/7-measurement-sci-image.jpg)
+
+> [Green Software Foundation](https://greensoftware.foundation/)
 
 ---
 
@@ -130,27 +139,42 @@ _revolution_ in sustainable software engineering</span>
 
 ---
 
+![h:540 center](https://corrode.dev/why-rust/energy-consumption.svg)
+
+> [Why Rust in production?](https://corrode.dev/why-rust/),
+> [Sustainability with Rust](https://aws.amazon.com/blogs/opensource/sustainability-with-rust/)
+
+---
+
 # ![1][1a] Sustainable Software Engineering
 
-- Find as many "Carbon Proxies" as you can, e.g.
-  - Time-to-interactive and Page weight
-  - Average server response time
-  - Cost of your services
-  - The utilisation of your servers
+> Find as many "Carbon Proxies" as you can
 
-![bg right:30% fit](https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2022/02/09/sust-rust-3.png)
+- Time-to-interactive and Page weight
+- Average server response time
+- Cost of your services
+- The utilisation of your servers
 
-[sustainability with rust](https://aws.amazon.com/blogs/opensource/sustainability-with-rust/)
+> [Sustainable Software Engineering overview](https://learn.microsoft.com/en-gb/training/modules/sustainable-software-engineering-overview),
+> [How to measure and reduce the carbon footprint of your application](https://www.microsoft.com/en-gb/industry/blog/technetuk/2021/10/12/how-to-measure-and-reduce-the-carbon-footprint-of-your-application/)
 
-[sustainable software engineering overview](https://learn.microsoft.com/en-gb/training/modules/sustainable-software-engineering-overview)
+---
 
-[how to measure and reduce the carbon footprint of your application](https://www.microsoft.com/en-gb/industry/blog/technetuk/2021/10/12/how-to-measure-and-reduce-the-carbon-footprint-of-your-application/)
+![h:540 center](https://corrode.dev/why-rust/bug-costs.svg)
+
+> [Why Rust in production?](https://corrode.dev/why-rust/)
+
+---
+
+![h:540 center](https://corrode.dev/why-rust/robustness.svg)
+
+> [Why Rust in production?](https://corrode.dev/why-rust/)
 
 ---
 
 ## Three revolutions
 
-![1][1a] Rust
+![1][1] Rust
 
 ![2][2a] <span class="morph" style="--morph-name:wasm;">WebAssembly</span>
 
@@ -162,15 +186,23 @@ _revolution_ in sustainable software engineering</span>
 
 ![bg 50% right](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WebAssembly_Logo.svg/1200px-WebAssembly_Logo.svg.png)
 
-![fit](https://www.fermyon.com/static/image/spin-twcm-wasi.png)
+---
+
+# ![2 h:150 w:150][2a] <span class="morph" style="--morph-name:wasm;">The **WebAssembly** _Component Model_</span>
+
+![fit center](https://www.fermyon.com/static/image/spin-twcm-wasi.png)
+
+---
+
+<iframe height="705" src="https://www.youtube.com/embed/tAACYA1Mwv4" title="Keynote: What is a Component (and Why)? - Luke Wagner, Distinguished Engineer, Fastly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
 ## Three revolutions
 
-![1][1a] Rust
+![1][1] Rust
 
-![2][2a] WebAssembly
+![2][2] WebAssembly
 
 ![3][3a] <span class="morph" style="--morph-name:platform;">Next-gen
 platforms</span>
@@ -183,4 +215,55 @@ platforms</span>
 
 ---
 
-![bg fit](https://cosmonic.com/assets/images/smallEpoch-e514189dc062ebf5ff99f937478ea336.jpeg)
+![h:400 center](https://cosmonic.com/assets/images/smallEpoch-e514189dc062ebf5ff99f937478ea336.jpeg)
+
+---
+
+# **Cosmonic** and _wasmCloud_
+
+> [https://cosmonic.com/](https://cosmonic.com/),
+> [https://wasmcloud.com/](https://wasmcloud.com/)
+
+# **Fermyon** and _Spin_
+
+> [https://www.fermyon.com/](https://www.fermyon.com/),
+> [https://www.fermyon.com/spin](https://www.fermyon.com/spin),
+> [https://www.fermyon.com/cloud](https://www.fermyon.com/cloud)
+
+---
+
+## Three revolutions
+
+![1][1a] Rust
+
+![2][2a] WebAssembly
+
+![3][3a] Next-gen platforms
+
+---
+
+# 6 principles of sustainable software engineering
+
+1. _Carbon efficiency_ — minimize the amount of carbon emitted per unit of work
+2. _Energy efficiency_ — the more you utilize a computer, the more efficient it
+   becomes at converting electricity to useful computing operations
+3. _Carbon awareness_ — Shifting demand to times when carbon intensity is low
+4. _Hardware efficiency_ — reduce embodied carbon by extending the life of
+   hardware
+5. _Measurement_ — measure the carbon footprint of your software
+6. _Climate commitments_ — net zero (abate/eliminate) vs. carbon neutral
+   (offset)
+
+> [25 minute overview](https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/)
+
+---
+
+# Thank you!
+
+<style scoped>section figure { margin-right: 100px !important; }</style>
+
+![fit h:100](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f64f.svg)
+
+[@stuartharris](https://twitter.com/stuartharris)
+
+![bg right:40% fit QR code](./qr.webp)
